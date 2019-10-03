@@ -21,3 +21,10 @@ $ npm run generate
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
 
+### Includes
+
+- Pug
+- Typescript
+- Vuex
+- Vuex-class
+- [Nuxt-property-decorator](https://github.com/nuxt-community/nuxt-property-decorator)
