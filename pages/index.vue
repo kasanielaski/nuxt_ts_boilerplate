@@ -1,7 +1,9 @@
 <template lang="pug">
     section.container
         div
-            AppLogo
+            AppLogo(
+                :msg="msg"
+            )
 
             h1.title
                 | nuxt_project
@@ -24,16 +26,29 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Vue, namespace } from 'nuxt-property-decorator';
 
+// @ts-ignore
 import AppLogo from '@/components/AppLogo';
+
+const mockStore = namespace('mock');
 
 @Component({
     components: {
         AppLogo
     }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+    @mockStore.Action('setMock') setMock!: (payload: string) => void;
+    @mockStore.Getter('getMock') getMock!: string;
+
+    msg = '';
+
+    created() {
+        this.setMock('12qdasd');
+        this.msg = this.getMock;
+    }
+}
 </script>
 
 <style>

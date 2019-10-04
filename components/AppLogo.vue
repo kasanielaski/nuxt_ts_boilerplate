@@ -4,10 +4,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator';
+import { Component, Vue, Prop } from 'nuxt-property-decorator';
 
 @Component
 export default class AppLogo extends Vue {
-    msg = 'ssssssssssss';
+    @Prop({
+        required: true,
+        type: String,
+        default: ''
+    })
+    msg!: string;
 }
 </script>
