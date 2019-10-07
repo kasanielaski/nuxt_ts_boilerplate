@@ -28,8 +28,7 @@
 <script lang="ts">
 import { Component, Vue, namespace } from 'nuxt-property-decorator';
 
-// @ts-ignore
-import AppLogo from '@/components/AppLogo';
+import AppLogo from '@/components/AppLogo.vue';
 
 const mockStore = namespace('mock');
 
@@ -45,7 +44,7 @@ export default class App extends Vue {
     msg = '';
 
     created() {
-        this.setMock('12qdasd');
+        this.setMock('123assd399');
         this.msg = this.getMock;
     }
 }
