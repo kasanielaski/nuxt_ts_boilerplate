@@ -1,14 +1,3 @@
-import Vuex from 'vuex';
+import { IRootState } from '@/types/store';
 
-import { mock } from './mock';
-
-const createStore = () => {
-    return new Vuex.Store({
-        state: {},
-        modules: {
-            mock
-        }
-    });
-};
-
-export default createStore;
+export const state = (): IRootState => ({});
